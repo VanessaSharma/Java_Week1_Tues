@@ -4,28 +4,11 @@ public class App {
   public static void main(String[] args) {
   Console myConsole = System.console();
 
-    ShelterAnimals dog = new ShelterAnimals();
-     dog.mAge = 4;
-     dog.mSpecies = "Poodle";
-     dog.mGender = "Male";
-     dog.mSize = "Medium";
-     dog.mColor = "White";
+    ShelterAnimals dog = new ShelterAnimals(4, "Poodle", "Male", "Medium", "White");
+    ShelterAnimals cat = new ShelterAnimals(2, "Stray", "Male", "Small", "Gray");
+    ShelterAnimals rabbit = new ShelterAnimals(1, "Dwarf", "Male", "Small", "Black");
 
-    ShelterAnimals cat = new ShelterAnimals();
-     cat.mAge = 2;
-     cat.mSpecies = "Stray";
-     cat.mGender = "Male";
-     cat.mSize = "Small";
-     cat.mColor = "Gray";
-
-    ShelterAnimals rabbit = new ShelterAnimals();
-     rabbit.mAge = 1;
-     rabbit.mSpecies = "Dwarf";
-     rabbit.mGender = "Male";
-     rabbit.mSize = "Small";
-     rabbit.mColor = "Black";
-
-    ShelterAnimals[] allShelterAnimals ={ dog, cat, rabbit};
+    ShelterAnimals[] allShelterAnimals = { dog, cat, rabbit};
      System.out.println("What size animal are you looking for?");
      String userSize = myConsole.readLine();
      String theUsersSize = userSize;
